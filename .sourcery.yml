@@ -1,0 +1,49 @@
+configurations:
+  - sources:
+      include:
+        - Sources/
+      exclude:
+        - Sources/SparkYOUR_COMPONENTTesting/
+        - Sources/SparkYOUR_COMPONENTSnapshotTesting/
+    templates:
+      - .sourcery/template/SparkAutoMockable.stencil
+    output: Sources/SparkYOUR_COMPONENTTesting/Generated/AutoMockable.generated.swift
+    args:
+      autoMockableImports: [Combine, SparkTheming]
+      autoMockableTestableImports: [SparkYOUR_COMPONENT]
+  - sources:
+      include:
+        - Sources/
+      exclude:
+        - Sources/SparkYOUR_COMPONENTTesting/
+        - Sources/SparkYOUR_COMPONENTSnapshotTesting/
+    templates:
+      - .sourcery/template/SparkAutoMockTest.stencil
+    output: Sources/SparkYOUR_COMPONENTTesting/Generated/AutoMockTest.generated.swift
+    args:
+      autoMockableImports: [Combine, SparkTheming]
+      autoMockableTestableImports: [SparkYOUR_COMPONENT]
+  - sources:
+      include:
+        - Sources/
+      exclude:
+        - Sources/SparkYOUR_COMPONENTTesting/
+        - Sources/SparkYOUR_COMPONENTSnapshotTesting/
+    templates:
+      - .sourcery/template/SparkAutoPublisherTest.stencil
+    output: Sources/SparkYOUR_COMPONENTTesting/Generated/AutoPublisherTest.generated.swift
+    args:
+      autoMockableImports: [Combine, SparkTheming]
+      autoMockableTestableImports: [SparkYOUR_COMPONENT]
+  - sources:
+      include:
+        - Sources/
+      exclude:
+        - Sources/SparkYOUR_COMPONENTTesting/
+        - Sources/SparkYOUR_COMPONENTSnapshotTesting/
+    templates:
+      - .sourcery/template/SparkAutoViewModelStub.stencil
+    output: Sources/SparkYOUR_COMPONENTTesting/Generated/AutoViewModelStub.generated.swift
+    args:
+      autoMockableImports: [Combine, SparkTheming]
+      autoMockableTestableImports: [SparkYOUR_COMPONENT]
