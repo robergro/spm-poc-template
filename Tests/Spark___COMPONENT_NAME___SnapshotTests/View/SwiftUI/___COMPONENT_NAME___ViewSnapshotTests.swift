@@ -1,9 +1,9 @@
 //
-//  YOUR_COMPONENTViewSnapshotTests.swift
-//  SPARKYOUR_COMPONENTTests
+//  ___COMPONENT_NAME___ViewSnapshotTests.swift
+//  Spark___COMPONENT_NAME___Tests
 //
-//  Created by YOUR_NAME on CURRENT_DATE.
-//  Copyright © CURRENT_YEAR Adevinta. All rights reserved.
+//  Created by ___USERNAME___ on ___CURRENT_DATE___.
+//  Copyright © ___CURRENT_YEAR___ Adevinta. All rights reserved.
 //
 
 import XCTest
@@ -14,32 +14,28 @@ import SwiftUI
 @_spi(SI_SPI) @testable import SparkInternalTesting
 @_spi(SI_SPI) @testable import SparkInternalSnapshotTesting
 
-@testable import SparkYOUR_COMPONENT
+@testable import Spark___COMPONENT_NAME___
 
-final class YOUR_COMPONENTViewSnapshotTests: SwiftUIComponentSnapshotTestCase {
-
+final class ___COMPONENT_NAME___ViewSnapshotTests: SwiftUIComponentSnapshotTestCase {
+    
     // MARK: - Properties
-
+    
     private let theme: Theme = SparkTheme.shared
-
+    
     // MARK: - Tests
-
+    
     func test() {
-        let scenarios = YOUR_COMPONENTScenarioSnapshotTests.allCases
-
+        let scenarios = ___COMPONENT_NAME___ScenarioSnapshotTests.allCases
+        
         for scenario in scenarios {
             let configurations = scenario.configuration(isSwiftUIComponent: true)
             for configuration in configurations {
-                let view = YOUR_COMPONENTView(
+                let view = ___COMPONENT_NAME___View(
                     theme: self.theme,
-                    intent: configuration.intent,
-                    variant: configuration.variant
+                    intent: configuration.intent
                 )
-                    .iconImage(configuration.iconImage?.rightValue)
-                    .text(configuration.text)
-                    .frame(width: configuration.width)
                     .fixedSize()
-
+                
                 self.assertSnapshot(
                     matching: view,
                     modes: configuration.modes,

@@ -1,17 +1,17 @@
 //
-//  YOUR_COMPONENTUIView.swift
-//  SPARKYOUR_COMPONENT
+//  ___COMPONENT_NAME___UIView.swift
+//  Spark___COMPONENT_NAME___
 //
-//  Created by YOUR_NAME on CURRENT_DATE.
-//  Copyright © CURRENT_YEAR Adevinta. All rights reserved.
+//  Created by ___USERNAME___ on ___CURRENT_DATE___.
+//  Copyright © ___CURRENT_YEAR___ Adevinta. All rights reserved.
 //
 
 import UIKit
 import SparkTheming
 @_spi(SI_SPI) import SparkInternal
 
-/// The UIKit version for the your_component.
-public final class YOUR_COMPONENTUIView: UIView {
+/// The UIKit version for the ___component_name___.
+public final class ___COMPONENT_NAME___UIView: UIView {
 
     // MARK: - Components
 
@@ -27,11 +27,10 @@ public final class YOUR_COMPONENTUIView: UIView {
 
     private var textLabel: UILabel = {
         let label = UILabel()
-        label.text = "YOUR_COMPONENT"
+        label.text = "Hello ___COMPONENT_NAME___"
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
         label.adjustsFontForContentSizeCategory = true
-        label.accessibilityIdentifier = AccessibilityIdentifier.text
         label.setContentCompressionResistancePriority(.required,
                                                       for: .vertical)
         label.setContentCompressionResistancePriority(.required,
@@ -41,15 +40,15 @@ public final class YOUR_COMPONENTUIView: UIView {
 
     // MARK: - Public Properties
 
-    /// The spark theme of the your_component.
+    /// The spark theme of the ___component_name___.
     public var theme: Theme {
         didSet {
             // TODO: If needed
         }
     }
 
-    /// The intent of the your_component.
-    public var intent: YOUR_COMPONENTIntent {
+    /// The intent of the ___component_name___.
+    public var intent: ___COMPONENT_NAME___Intent {
         didSet {
             // TODO: If needed
         }
@@ -61,13 +60,13 @@ public final class YOUR_COMPONENTUIView: UIView {
 
     // MARK: - Initialization
 
-    /// Initialize a new your_component view.
+    /// Initialize a new ___component_name___ view.
     /// - Parameters:
-    ///   - theme: The spark theme of the your_component.
-    ///   - intent: The intent of the your_component.
+    ///   - theme: The spark theme of the ___component_name___.
+    ///   - intent: The intent of the ___component_name___.
     public convenience init(
         theme: Theme,
-        intent: YOUR_COMPONENTIntent
+        intent: ___COMPONENT_NAME___Intent
     ) {
         self.init(
             theme,
@@ -77,7 +76,7 @@ public final class YOUR_COMPONENTUIView: UIView {
 
     private init(
         _ theme: Theme,
-        intent: YOUR_COMPONENTIntent
+        intent: ___COMPONENT_NAME___Intent
     ) {
         self.theme = theme
         self.intent = intent
@@ -92,6 +91,9 @@ public final class YOUR_COMPONENTUIView: UIView {
     // MARK: - View setup
 
     private func setupView() {
+        // Properties
+        self.accessibilityIdentifier = ___COMPONENT_NAME___AccessibilityIdentifier.view
+
         // Add subview
         self.addSubview(self.contentStackView)
         
@@ -114,7 +116,8 @@ public final class YOUR_COMPONENTUIView: UIView {
 
     private func setupConstraints() {
         self.setupViewConstraints()
-        
+        self.setupContentStackViewConstraints()
+
         // TODO: If Needed
     }
 
@@ -122,6 +125,17 @@ public final class YOUR_COMPONENTUIView: UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
 
         // TODO: If Needed
+    }
+
+    private func setupContentStackViewConstraints() {
+        self.contentStackView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            self.contentStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.contentStackView.topAnchor.constraint(equalTo: self.topAnchor),
+            self.contentStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.contentStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
     }
 
     // MARK: - Subscribe

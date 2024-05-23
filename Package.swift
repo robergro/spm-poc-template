@@ -4,18 +4,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "SparkYOUR_COMPONENT",
+    name: "Spark___COMPONENT_NAME___",
     platforms: [
         .iOS(.v15)
     ],
     products: [
         .library(
-            name: "SparkYOUR_COMPONENT",
-            targets: ["SparkYOUR_COMPONENT"]
+            name: "Spark___COMPONENT_NAME___",
+            targets: ["Spark___COMPONENT_NAME___"]
         ),
         .library(
-            name: "SparkYOUR_COMPONENTTesting",
-            targets: ["SparkYOUR_COMPONENTTesting"]
+            name: "Spark___COMPONENT_NAME___Testing",
+            targets: ["Spark___COMPONENT_NAME___Testing"]
         )
     ],
     dependencies: [
@@ -39,7 +39,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "SparkYOUR_COMPONENT",
+            name: "Spark___COMPONENT_NAME___",
             dependencies: [
                 .product(
                     name: "SparkInternal",
@@ -52,9 +52,9 @@ let package = Package(
             ]
         ),
         .target(
-            name: "SparkYOUR_COMPONENTTesting",
+            name: "Spark___COMPONENT_NAME___Testing",
             dependencies: [
-                "SparkYOUR_COMPONENT",
+                "Spark___COMPONENT_NAME___",
                 .product(
                     name: "SparkInternal",
                     package: "spm-poc-common"
@@ -74,10 +74,10 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "SparkYOUR_COMPONENTUnitTests",
+            name: "Spark___COMPONENT_NAME___UnitTests",
             dependencies: [
-                "SparkYOUR_COMPONENT",
-                "SparkYOUR_COMPONENTTesting",
+                "Spark___COMPONENT_NAME___",
+                "Spark___COMPONENT_NAME___Testing",
                 .product(
                     name: "SparkInternalTesting",
                     package: "spm-poc-common"
@@ -89,10 +89,10 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "SparkYOUR_COMPONENTSnapshotTests",
+            name: "Spark___COMPONENT_NAME___SnapshotTests",
             dependencies: [
-                "SparkYOUR_COMPONENT",
-                "SparkYOUR_COMPONENTTesting",
+                "Spark___COMPONENT_NAME___",
+                "Spark___COMPONENT_NAME___Testing",
                 .product(
                     name: "SparkInternalSnapshotTesting",
                     package: "spm-poc-common"

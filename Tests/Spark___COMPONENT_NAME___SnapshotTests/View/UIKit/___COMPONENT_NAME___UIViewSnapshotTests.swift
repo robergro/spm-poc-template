@@ -1,9 +1,9 @@
 //
-//  YOUR_COMPONENTUIViewSnapshotTests.swift
-//  SPARKYOUR_COMPONENTTests
+//  ___COMPONENT_NAME___UIViewSnapshotTests.swift
+//  Spark___COMPONENT_NAME___Tests
 //
-//  Created by YOUR_NAME on CURRENT_DATE.
-//  Copyright © CURRENT_YEAR Adevinta. All rights reserved.
+//  Created by ___USERNAME___ on ___CURRENT_DATE___.
+//  Copyright © ___CURRENT_YEAR___ Adevinta. All rights reserved.
 //
 
 import XCTest
@@ -13,26 +13,26 @@ import XCTest
 @_spi(SI_SPI) @testable import SparkInternalTesting
 @_spi(SI_SPI) @testable import SparkInternalSnapshotTesting
 
-@testable import SparkYOUR_COMPONENT
+@testable import Spark___COMPONENT_NAME___
 
-final class YOUR_COMPONENTUIViewSnapshotTests: UIKitComponentSnapshotTestCase {
-
+final class ___COMPONENT_NAME___UIViewSnapshotTests: UIKitComponentSnapshotTestCase {
+    
     // MARK: - Properties
-
+    
     private let theme: Theme = SparkTheme.shared
-
+    
     // MARK: - Tests
-
+    
     func test() {
-        let scenarios = YOUR_COMPONENTScenarioSnapshotTests.allCases
-
+        let scenarios = ___COMPONENT_NAME___ScenarioSnapshotTests.allCases
+        
         for scenario in scenarios {
             let configurations = scenario.configuration(isSwiftUIComponent: false)
             for configuration in configurations {
-
-                var view = YOUR_COMPONENTUIView(
-                        theme: self.theme,
-                        intent: configuration.intent
+                
+                let view = ___COMPONENT_NAME___UIView(
+                    theme: self.theme,
+                    intent: configuration.intent
                 )
                 view.translatesAutoresizingMaskIntoConstraints = false
 

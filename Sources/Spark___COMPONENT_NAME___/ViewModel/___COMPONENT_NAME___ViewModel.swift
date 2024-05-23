@@ -1,15 +1,15 @@
 //
-//  YOUR_COMPONENTViewModel.swift
-//  SPARKYOUR_COMPONENT
+//  ___COMPONENT_NAME___ViewModel.swift
+//  Spark___COMPONENT_NAME___
 //
-//  Created by YOUR_NAME on CURRENT_DATE.
-//  Copyright © CURRENT_YEAR Adevinta. All rights reserved.
+//  Created by ___USERNAME___ on ___CURRENT_DATE___.
+//  Copyright © ___CURRENT_YEAR___ Adevinta. All rights reserved.
 //
 
 import SwiftUI
 import SparkTheming
 
-final class YOUR_COMPONENTViewModel: ObservableObject {
+final class ___COMPONENT_NAME___ViewModel: ObservableObject {
 
     // MARK: - Public properties
 
@@ -18,13 +18,13 @@ final class YOUR_COMPONENTViewModel: ObservableObject {
     // MARK: - Private properties
 
     private let theme: Theme
-    private var intent: YOUR_COMPONENTIntent
+    private var intent: ___COMPONENT_NAME___Intent
 
     // MARK: - Initialization
 
     init(
         theme: Theme,
-        intent: YOUR_COMPONENTIntent = .main
+        intent: ___COMPONENT_NAME___Intent = .primary
     ) {
         self.theme = theme
         self.intent = intent

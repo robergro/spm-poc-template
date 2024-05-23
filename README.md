@@ -1,17 +1,17 @@
 
-# YOUR_COMPONENT
+# ___COMPONENT_NAME___
 
 TODO: 
 
 ## Specifications
 
-The your_component specifications on Zeroheight is [here](https://spark.adevinta.com/1186e1705/p/34b742-your_component).
+The ___component_name___ specifications on Zeroheight is [here](TODO:).
 
-![Figma anatomy](https://github.com/adevinta/spark-ios-your_component/blob/main/assets/anatomy.png)
+![Figma anatomy](https://github.com/adevinta/spark-ios-___component_name___/blob/main/assets/anatomy.png)
 
 ## Usage
 
-YOUR_COMPONENT is available both in UIKit and SwiftUI.
+___COMPONENT_NAME___ is available both in UIKit and SwiftUI.
 
 ### UIKit
 
@@ -32,7 +32,7 @@ YOUR_COMPONENT is available both in UIKit and SwiftUI.
 #### Initialization
 
 ```swift
-let your_component = YOUR_COMPONENTUIView(
+let ___component_name___ = ___COMPONENT_NAME___UIView(
     TODO: TODO
 )
 ```
@@ -47,7 +47,7 @@ TODO
 #### Initialization
 
 ```swift
-let your_component = YOUR_COMPONENTView(
+let ___component_name___ = ___COMPONENT_NAME___View(
     TODO: TODO
 )
 ```
